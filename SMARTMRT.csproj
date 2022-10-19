@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{926BF948-96D5-4CE3-AE0B-BC5AF8A95896}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SMARTMRT</RootNamespace>
+    <AssemblyName>SMARTMRT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <AllowedReferenceRelatedFileExtensions>
+      *.pdb;
+    </AllowedReferenceRelatedFileExtensions>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>smartMRT.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\admin\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Gitea.API, Version=1.0.20.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Gitea.API.1.0.20\lib\net45\Gitea.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=16.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.SqlManagementObjects.160.2004021.0\lib\net462\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=16.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.SqlManagementObjects.160.2004021.0\lib\net462\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=16.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.SqlManagementObjects.160.2004021.0\lib\net462\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="R4ND_VS2010_Control_X64">
+      <HintPath>..\..\..\..\New folder\R4ND_VS2010_Control_X64.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.ChartView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PdfViewer, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.PivotGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadChart, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadChart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDiagram, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadDiagram.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMap, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadMarkupEditor, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadMarkupEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadSpreadsheet, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadSpreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadToastNotification, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadToastNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadToastNotification.Design, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadToastNotification.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadWebCam, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RadWebCam.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Scheduler, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Scheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.SpellChecker, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.SyntaxEditor, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.SyntaxEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Aqua, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Aqua.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Breeze, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Breeze.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Desert, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Desert.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.FluentDark, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.FluentDark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.HighContrastBlack, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.HighContrastBlack.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Material, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialBlueGrey, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.MaterialBlueGrey.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialPink, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.MaterialPink.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.MaterialTeal.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Black, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2007Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2007Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Silver, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2013Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2019, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Office2019.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.TelerikMetro.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroBlue, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.TelerikMetroBlue.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.TelerikMetroTouch, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.TelerikMetroTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.VisualStudio2012Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2022, Version=2022.1.118.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.VisualStudio2022.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows7, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.Themes.Windows8.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI.Design, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.WinControls.UI.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.CMapUtils, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.CMapUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Doc, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.MediaFoundation, Version=2021.2.610.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2021.2.614.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\TelerikData.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikExport, Version=2021.2.615.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\TelerikExport.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikProviderForGoogleAnalytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\TelerikProviderForGoogleAnalytics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_MO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_MO.Designer.cs">
+      <DependentUpon>Add_MO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Production.Designer.cs">
+      <DependentUpon>Add_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auto_Buffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto_Buffer.Designer.cs">
+      <DependentUpon>Auto_Buffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Balance_Hanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Balance_Hanger.Designer.cs">
+      <DependentUpon>Balance_Hanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buffer.Designer.cs">
+      <DependentUpon>Buffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buffer_Hangers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buffer_Hangers.Designer.cs">
+      <DependentUpon>Buffer_Hangers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buffer_Sorting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buffer_Sorting.Designer.cs">
+      <DependentUpon>Buffer_Sorting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller_Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller_Setup.Designer.cs">
+      <DependentUpon>Controller_Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Current_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Current_Production.Designer.cs">
+      <DependentUpon>Current_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Daily_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Daily_Production.Designer.cs">
+      <DependentUpon>Daily_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database_Connection.cs" />
+    <Compile Include="DataGridViewProgressColumn.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Design_Sequence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design_Sequence.Designer.cs">
+      <DependentUpon>Design_Sequence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_MO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_MO.Designer.cs">
+      <DependentUpon>Edit_MO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Records.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Records.Designer.cs">
+      <DependentUpon>Edit_Records.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Inspection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Inspection.Designer.cs">
+      <DependentUpon>Employee_Inspection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Logs.Designer.cs">
+      <DependentUpon>Employee_Logs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee_Skill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee_Skill.Designer.cs">
+      <DependentUpon>Employee_Skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station_Idle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station_Idle.Designer.cs">
+      <DependentUpon>Station_Idle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emp_Hanger_Inspect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emp_Hanger_Inspect.Designer.cs">
+      <DependentUpon>Emp_Hanger_Inspect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Line_Balancing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Line_Balancing.Designer.cs">
+      <DependentUpon>Line_Balancing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine_Assigned_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine_Assigned_Report.Designer.cs">
+      <DependentUpon>Machine_Assigned_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine_Repair_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine_Repair_Report.Designer.cs">
+      <DependentUpon>Machine_Repair_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Machine_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Machine_Report.Designer.cs">
+      <DependentUpon>Machine_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters.Designer.cs">
+      <DependentUpon>Masters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox_loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox_loading.Designer.cs">
+      <DependentUpon>MessageBox_loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MO_Operation_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MO_Operation_Report.Designer.cs">
+      <DependentUpon>MO_Operation_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MO_Production_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MO_Production_Report.Designer.cs">
+      <DependentUpon>MO_Production_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MRT_GLOBALDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MRT_GLOBALDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Open_MO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Open_MO.Designer.cs">
+      <DependentUpon>Open_MO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation_Skill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation_Skill.Designer.cs">
+      <DependentUpon>Operation_Skill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll.Designer.cs">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payroll_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payroll_Employee.Designer.cs">
+      <DependentUpon>Payroll_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production_Planning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production_Planning.Designer.cs">
+      <DependentUpon>Production_Planning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC.Designer.cs">
+      <DependentUpon>QC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC_MO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC_MO.Designer.cs">
+      <DependentUpon>QC_MO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC_Operations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC_Operations.Designer.cs">
+      <DependentUpon>QC_Operations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QC_STATION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QC_STATION.Designer.cs">
+      <DependentUpon>QC_STATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restore_DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restore_DB.Designer.cs">
+      <DependentUpon>Restore_DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restore_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restore_Production.Designer.cs">
+      <DependentUpon>Restore_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sequence_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sequence_Report.Designer.cs">
+      <DependentUpon>Sequence_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup.Designer.cs">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spare_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare_Inventory.Designer.cs">
+      <DependentUpon>Spare_Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spare_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spare_Report.Designer.cs">
+      <DependentUpon>Spare_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash_Screen.Designer.cs">
+      <DependentUpon>Splash_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Station_Assign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station_Assign.Designer.cs">
+      <DependentUpon>Station_Assign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station_Production.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station_Production.Designer.cs">
+      <DependentUpon>Station_Production.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Station_Status.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Station_Status.Designer.cs">
+      <DependentUpon>Station_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Top_Defects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top_Defects.Designer.cs">
+      <DependentUpon>Top_Defects.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_MO.resx">
+      <DependentUpon>Add_MO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_prod.rdlc" />
+    <EmbeddedResource Include="Add_Production.resx">
+      <DependentUpon>Add_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Article_Production_Report.rdlc" />
+    <EmbeddedResource Include="Auto_Buffer.resx">
+      <DependentUpon>Auto_Buffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Balance_Hanger.resx">
+      <DependentUpon>Balance_Hanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buffer.resx">
+      <DependentUpon>Buffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buffer_Hangers.resx">
+      <DependentUpon>Buffer_Hangers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buffer_Sorting.resx">
+      <DependentUpon>Buffer_Sorting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller_Setup.resx">
+      <DependentUpon>Controller_Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cumulative_EMP_Performance_Report.rdlc" />
+    <EmbeddedResource Include="Current_Production.resx">
+      <DependentUpon>Current_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cur_prod.rdlc" />
+    <EmbeddedResource Include="Daily_Employee_Report.rdlc" />
+    <EmbeddedResource Include="Daily_mono_report.rdlc" />
+    <EmbeddedResource Include="Daily_MO_EMP_Report.rdlc" />
+    <EmbeddedResource Include="Daily_Production.resx">
+      <DependentUpon>Daily_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daily_report.rdlc" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design_Sequence.resx">
+      <DependentUpon>Design_Sequence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_MO.resx">
+      <DependentUpon>Edit_MO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Records.resx">
+      <DependentUpon>Edit_Records.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Inspection.resx">
+      <DependentUpon>Employee_Inspection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Logs.resx">
+      <DependentUpon>Employee_Logs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee_Skill.rdlc" />
+    <EmbeddedResource Include="Employee_Skill.resx">
+      <DependentUpon>Employee_Skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="station_function.rdlc" />
+    <EmbeddedResource Include="Station_Idle.resx">
+      <DependentUpon>Station_Idle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emp_Hanger_Inspect.resx">
+      <DependentUpon>Emp_Hanger_Inspect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMP_LOGIN.rdlc" />
+    <EmbeddedResource Include="emp_report.rdlc" />
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hourly_Performance_Report.rdlc" />
+    <EmbeddedResource Include="HOURLY_PRODUCTION.rdlc" />
+    <EmbeddedResource Include="Houry_MO_EMP_Report.rdlc" />
+    <EmbeddedResource Include="Keypad.rdlc" />
+    <EmbeddedResource Include="Line_Balancing.rdlc" />
+    <EmbeddedResource Include="Line_Balancing.resx">
+      <DependentUpon>Line_Balancing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="machine_assign.rdlc" />
+    <EmbeddedResource Include="Machine_Assigned_Report.resx">
+      <DependentUpon>Machine_Assigned_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="machine_repair.rdlc" />
+    <EmbeddedResource Include="Machine_Repair_Report.resx">
+      <DependentUpon>Machine_Repair_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="machine_report.rdlc" />
+    <EmbeddedResource Include="Machine_Report.resx">
+      <DependentUpon>Machine_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters.resx">
+      <DependentUpon>Masters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox_loading.resx">
+      <DependentUpon>MessageBox_loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MO_OP.rdlc" />
+    <EmbeddedResource Include="MO_Operation_Report.rdlc" />
+    <EmbeddedResource Include="MO_Operation_Report.resx">
+      <DependentUpon>MO_Operation_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MO_PROD.rdlc" />
+    <EmbeddedResource Include="MO_Production_Report.resx">
+      <DependentUpon>MO_Production_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Open_MO.resx">
+      <DependentUpon>Open_MO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OPERATION_HOURLY.rdlc" />
+    <EmbeddedResource Include="Operation_Skill.rdlc" />
+    <EmbeddedResource Include="Operation_Skill.resx">
+      <DependentUpon>Operation_Skill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll.rdlc" />
+    <EmbeddedResource Include="Payroll.resx">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payroll_Employee.rdlc" />
+    <EmbeddedResource Include="Payroll_Employee.resx">
+      <DependentUpon>Payroll_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production_Planning.rdlc" />
+    <EmbeddedResource Include="Production_Planning.resx">
+      <DependentUpon>Production_Planning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC.rdlc" />
+    <EmbeddedResource Include="QC.resx">
+      <DependentUpon>QC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC_MO.rdlc" />
+    <EmbeddedResource Include="QC_MO.resx">
+      <DependentUpon>QC_MO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC_Operation.rdlc" />
+    <EmbeddedResource Include="QC_Operations.resx">
+      <DependentUpon>QC_Operations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QC_STATION.rdlc" />
+    <EmbeddedResource Include="QC_STATION.resx">
+      <DependentUpon>QC_STATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restore.rdlc" />
+    <EmbeddedResource Include="Restore_DB.resx">
+      <DependentUpon>Restore_DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restore_Production.resx">
+      <DependentUpon>Restore_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence_Report.rdlc" />
+    <EmbeddedResource Include="Sequence_Report.resx">
+      <DependentUpon>Sequence_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpareReport.rdlc" />
+    <EmbeddedResource Include="Spare_Inventory.rdlc" />
+    <EmbeddedResource Include="Spare_Inventory.resx">
+      <DependentUpon>Spare_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spare_Report.resx">
+      <DependentUpon>Spare_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash_Screen.resx">
+      <DependentUpon>Splash_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station.rdlc" />
+    <EmbeddedResource Include="Station_Assign.resx">
+      <DependentUpon>Station_Assign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station_Prod.rdlc" />
+    <EmbeddedResource Include="Station_Production.resx">
+      <DependentUpon>Station_Production.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Station_Status.resx">
+      <DependentUpon>Station_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top_Defects.rdlc" />
+    <EmbeddedResource Include="Top_Defects.resx">
+      <DependentUpon>Top_Defects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TOP_EMPLOYEE.rdlc" />
+    <EmbeddedResource Include="TOP_MONO.rdlc" />
+    <EmbeddedResource Include="TOP_OPERATION.rdlc" />
+    <EmbeddedResource Include="TOP_STATION.rdlc" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="hanger_report.rdlc" />
+    <None Include="MRT_GLOBALDBDataSet.xsc">
+      <DependentUpon>MRT_GLOBALDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MRT_GLOBALDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MRT_GLOBALDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MRT_GLOBALDBDataSet.xss">
+      <DependentUpon>MRT_GLOBALDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifi_off_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smartOCTO123.jpg" />
+    <None Include="Resources\smartOCTOsplash.jpg" />
+    <None Include="Resources\Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Microsoft.SqlServer.Types.11.0.1\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\smartOCTOsplashnew.jpg" />
+    <None Include="Resources\emergency_stop_button_32px.png" />
+    <None Include="Resources\emergency_stop_button_24px.png" />
+    <Content Include="Resources\SMART-PWRDBY.PNG" />
+    <Content Include="Resources\SMART-PWRDBY112.png" />
+    <Content Include="Resources\SMART-PWRDBY2.PNG" />
+    <Content Include="smartMRT.ICO" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\sqlserverspatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr100.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\sqlserverspatial110.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>
