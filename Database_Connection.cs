@@ -50,8 +50,8 @@ namespace SMARTMRT
         {
             try
             {
-                //getPassword();  //get pms server ipaddress and login credential
-                //password = DecryptPassword(password, false);   //decrypt password
+                getPassword();  //get pms server ipaddress and login credential
+                password = DecryptPassword(password, false);   //decrypt password
                 con = new SqlConnection("Data Source=" + IPAddress + ",1433;Network Library=DBMSSOCN;Initial Catalog=MRT_GLOBALDB;User ID=" + UserName + ";Password=" + password + ";Connection Timeout=5;MultipleActiveResultSets=true");
                 con.Open();  //connect to pms server
                 return (a);
